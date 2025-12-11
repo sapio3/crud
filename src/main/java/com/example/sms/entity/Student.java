@@ -27,7 +27,7 @@ public class Student {
     @Column(nullable = false, length = 50)
     private String department;
 
-    @Column(nullable = false)
+    @Column(name = "year_of_study", nullable = false)
     private int year;
 
     @Column(name = "created_at", updatable = false)
