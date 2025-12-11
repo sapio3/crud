@@ -74,8 +74,9 @@ public class StudentServiceImpl implements StudentService {
         }
 
         if (updatedStudent.getYearOfStudy() >= 1 && updatedStudent.getYearOfStudy() <= 4) {
-            existing.setYear(updatedStudent.getYear());
+            existing.setYearOfStudy(updatedStudent.getYearOfStudy());
         }
+
 
         return studentRepository.save(existing);
     }
