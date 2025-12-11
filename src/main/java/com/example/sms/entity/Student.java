@@ -28,18 +28,18 @@ public class Student {
     private String department;
 
     @Column(name = "year_of_study", nullable = false)
-    private int year;
+    private int yearOfStudy;
 
     @Column(name = "created_at", updatable = false)
     private LocalDateTime createdAt;
 
     public Student() {}
 
-    public Student(String name, String email, String department, int year) {
+    public Student(String name, String email, String department, int yearOfStudy) {
         this.name = name;
         this.email = email;
         this.department = department;
-        this.year = year;
+        this.yearOfStudy = yearOfStudy;
     }
 
     @PrePersist
@@ -51,13 +51,18 @@ public class Student {
     public String getName() { return name; }
     public String getEmail() { return email; }
     public String getDepartment() { return department; }
-    public int getYear() { return year; }
+
+    // FIXED GETTER
+    public int getYearOfStudy() { return yearOfStudy; }
+
     public LocalDateTime getCreatedAt() { return createdAt; }
 
     public void setId(Long id) { this.id = id; }
     public void setName(String name) { this.name = name; }
     public void setEmail(String email) { this.email = email; }
     public void setDepartment(String department) { this.department = department; }
-    public void setYear(int year) { this.year = year; }
+    
+    public void setYearOfStudy(int yearOfStudy) { this.yearOfStudy = yearOfStudy; }
+
     public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
 }
