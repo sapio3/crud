@@ -33,7 +33,7 @@ public class StudentServiceImpl implements StudentService {
             throw new IllegalArgumentException("Email already exists");
         }
 
-        if (student.getYear() < 1 || student.getYear() > 4) {
+        if (student.getYearOfStudy() < 1 || student.getYearOfStudy() > 4) {
             throw new IllegalArgumentException("Year must be between 1 and 4");
         }
 
@@ -73,7 +73,7 @@ public class StudentServiceImpl implements StudentService {
             existing.setDepartment(updatedStudent.getDepartment());
         }
 
-        if (updatedStudent.getYear() >= 1 && updatedStudent.getYear() <= 4) {
+        if (updatedStudent.getYearOfStudy() >= 1 && updatedStudent.getYearOfStudy() <= 4) {
             existing.setYear(updatedStudent.getYear());
         }
 
