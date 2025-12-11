@@ -1,0 +1,19 @@
+src/main/resources/application.properties
+
+
+target/
+
+# Logs
+*.log
+
+# IntelliJ / VSCode / Eclipse
+.idea/
+.vscode/
+*.iml
+.classpath
+.project
+.settings/
+
+# OS files
+.DS_Store
+Thumbs.db
