@@ -50,6 +50,10 @@ public class StudentServiceImpl implements StudentService {
         return studentRepository.findById(id)
                 .orElseThrow(() -> new StudentNotFoundException("Student not found with id: " + id));
     }
+    @Override
+    public void deleteAllStudents() {
+        studentRepository.deleteAll();
+    }
 
     @Override
     public Student updateStudent(Long id, Student updatedStudent) {

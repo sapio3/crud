@@ -29,6 +29,12 @@ public class StudentController {
     public ResponseEntity<List<Student>> getAllStudents() {
         return ResponseEntity.ok(studentService.getAllStudents());
     }
+    @DeleteMapping("/all")
+    public ResponseEntity<String> deleteAllStudents() {
+        studentService.deleteAllStudents();
+        return ResponseEntity.ok("All students deleted successfully");
+    }
+
 
     @GetMapping("/{id}")
     public ResponseEntity<Student> getStudentById(@PathVariable Long id) {
